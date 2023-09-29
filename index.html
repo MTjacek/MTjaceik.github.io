@@ -3,113 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Your Resume</title>
     <style>
         body {
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #333;
         }
 
         .container {
-            max-width: 800px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .textbox {
+            width: 80%;
+            max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: white;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .button-container {
+            margin-top: 20px;
         }
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        .github-button {
-            display: inline-block;
+        .button {
+            background-color: #007bff;
+            color: white;
             padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
             text-decoration: none;
-            margin-right: 10px;
             border-radius: 5px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer</p>
-    </header>
-
     <div class="container">
-        <section>
-            <h2>Summary</h2>
-            <p>A passionate web developer with experience in HTML, CSS, and JavaScript. Skilled in creating responsive and user-friendly websites.</p>
-        </section>
+        <div class="textbox">
+            <h1>Resume Section 1</h1>
+            <p>This is the first section of your resume. You can add your content here.</p>
+        </div>
+        <div class="textbox">
+            <h1>Resume Section 2</h1>
+            <p>This is the second section of your resume. You can add your content here.</p>
+        </div>
+        <!-- Add more textboxes for additional sections -->
 
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>Web Accessibility</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <h3>Web Developer Intern</h3>
-            <p>ABC Company - Summer 2022</p>
-            <ul>
-                <li>Assisted in building and maintaining company websites.</li>
-                <li>Collaborated with the development team to implement new features.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p>XYZ University - 2020</p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>Email: yourname@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname/">https://www.linkedin.com/in/yourname/</a></p>
-        </section>
-
-        <section>
-            <h2>GitHub Projects</h2>
-            <a class="github-button" href="https://github.com/yourusername/project1" target="_blank">Project 1</a>
-            <a class="github-button" href="https://github.com/yourusername/project2" target="_blank">Project 2</a>
-            <!-- Add more project buttons as needed -->
-        </section>
+        <div class="button-container">
+            <a class="button" href="https://github.com/yourgithubproject1">GitHub Project 1</a>
+            <a class="button" href="https://github.com/yourgithubproject2">GitHub Project 2</a>
+            <!-- Add more buttons for your GitHub projects -->
+        </div>
     </div>
+
+    <!-- JavaScript for scrolling -->
+    <script>
+        const textboxes = document.querySelectorAll('.textbox');
+        let currentTextboxIndex = 0;
+
+        function scrollToNextTextbox() {
+            currentTextboxIndex++;
+            if (currentTextboxIndex >= textboxes.length) {
+                currentTextboxIndex = 0;
+            }
+            textboxes[currentTextboxIndex].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        setInterval(scrollToNextTextbox, 5000); // Change textboxes every 5 seconds (adjust as needed)
+    </script>
 </body>
 </html>
+
