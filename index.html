@@ -3,84 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Resume</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .textbox {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            color: white;
-        }
-
-        .button-container {
-            margin-top: 20px;
-        }
-
-        .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px;
-        }
-    </style>
+    <title>Your Name - Resume</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="textbox">
-            <h1>Resume Section 1</h1>
-            <p>This is the first section of your resume. You can add your content here.</p>
+        <div class="contact-box">
+            <a href="https://github.com/MTjacek">GitHub</a>
+            <p>Phone: (406) 531-8812</p>
+            <p>Email: oconnell.jacek406@gmail.com</p>
         </div>
-        <div class="textbox">
-            <h1>Resume Section 2</h1>
-            <p>This is the second section of your resume. You can add your content here.</p>
-        </div>
-        <!-- Add more textboxes for additional sections -->
+        <header>
+            <h1>Jacek O'Connell</h1>
+            <p>Software Developer</p> <!-- Changed "software developer" to "Software Developer" -->
+        </header>
 
-        <div class="button-container">
-            <a class="button" href="https://github.com/yourgithubproject1">GitHub Project 1</a>
-            <a class="button" href="https://github.com/yourgithubproject2">GitHub Project 2</a>
-            <!-- Add more buttons for your GitHub projects -->
-        </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I've been coding seriously since the beginning of high school, mastering a number of coding languages and computer science topics, with web design skills and vast knowledge of HTML, CSS, and JavaScript. I also have proficiency in many languages used in software such as Python and C++.</p> <!-- Corrected spelling and grammar -->
+        </section>
+
+        <section id="experience">
+            <h2>Project Skills</h2>
+            <p>I bring a number of unique skills to the table when it comes to computer-related projects as a whole. I have in-depth knowledge of cryptography, both the mathematical side and the code. I'm familiar with the inner workings of the Windows operating system as well as multiple distributions of Linux. The most important thing, however, is the way I organize and dedicate myself to an individual project, setting personal deadlines and quotas for daily, weekly, and monthly work.</p> <!-- Corrected spelling and grammar -->
+        </section>
+
+        <section id="github-projects">
+            <h2>GitHub Projects</h2>
+            <div class="github-project">
+                <h3>Project 1</h3>
+                <p>Description of your GitHub project.</p>
+                <a href="https://github.com/yourusername/project1">GitHub Repository</a>
+            </div>
+            <div class="github-project">
+                <h3>Project 2</h3>
+                <p>Description of your GitHub project.</p>
+                <a href="https://github.com/yourusername/project2">GitHub Repository</a>
+            </div>
+            <div class="github-project">
+                <h3>Project 3</h3>
+                <p>Description of your GitHub project.</p>
+                <a href="https://github.com/yourusername/project3">GitHub Repository</a> <!-- Corrected the GitHub repository link for Project 3 -->
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Jacek O'Connell</p>
+        </footer>
     </div>
-
-    <!-- JavaScript for scrolling -->
-    <script>
-        const textboxes = document.querySelectorAll('.textbox');
-        let currentTextboxIndex = 0;
-
-        function scrollToNextTextbox() {
-            currentTextboxIndex++;
-            if (currentTextboxIndex >= textboxes.length) {
-                currentTextboxIndex = 0;
-            }
-            textboxes[currentTextboxIndex].scrollIntoView({ behavior: 'smooth' });
-        }
-
-        setInterval(scrollToNextTextbox, 5000); // Change textboxes every 5 seconds (adjust as needed)
-    </script>
 </body>
 </html>
-
